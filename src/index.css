@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Bricolage Grotesque", system-ui, sans-serif;
+
+  /* Confirmily brand (replace with exact values from the logo file) */
+  --color-brand: #115c9e;
+  --color-navy: #1a335c;
+  --color-navy-light: #26497d;
+  --color-accent: #2794b3;
+  --color-sky: #96d8f4;
+
+  /* Semantic colors */
+  --color-violet: #6d28d9;
+  --color-gold: #ffb000;
+  --color-danger: #e8365d;
+  --color-success: #16a34a;
+
+  /* Surfaces and text */
+  --color-canvas: #eef8fd;
+  --color-ink: #12274a;
+  --color-muted: #4d6486;
+}
+
+body {
+  margin: 0;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
