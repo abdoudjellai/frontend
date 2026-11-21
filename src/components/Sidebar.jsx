@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { LayoutGrid, Package, Users, Truck, Store, TrendingUp, Bot, Settings } from 'lucide-react'
+import { LayoutGrid, Package, Users, Truck, Store, TrendingUp, Settings, Sparkles } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
 
 const NAV = [
@@ -9,7 +9,7 @@ const NAV = [
   { to: '/shipments', label: 'Shipments', icon: Truck },
   { to: '/couriers', label: 'Couriers', icon: Store },
   { to: '/analytics', label: 'Analytics', icon: TrendingUp },
-  { to: '/assistant', label: 'AI Assistant', icon: Bot },
+  { to: '/business-assistant', label: 'Business Assistant', icon: Sparkles },
 ]
 
 const link = ({ isActive }) =>

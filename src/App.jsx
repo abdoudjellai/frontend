@@ -10,7 +10,7 @@ import Customers from './pages/Customers'
 import Shipments from './pages/Shipments'
 import Couriers from './pages/Couriers'
 import Analytics from './pages/Analytics'
-import Chatbot from './pages/Chatbot'
+import BusinessAssistant from './pages/BusinessAssistant'
 import Settings from './pages/Settings'
 
 export default function App() {
@@ -34,7 +34,8 @@ export default function App() {
           <Route path="/shipments" element={<Shipments />} />
           <Route path="/couriers" element={<Couriers />} />
           <Route path="/analytics" element={<Analytics />} />
-          <Route path="/assistant" element={<Chatbot />} />
+          <Route path="/business-assistant" element={<BusinessAssistant />} />
+          <Route path="/assistant" element={<Navigate to="/business-assistant" replace />} />
           <Route path="/settings" element={<Settings />} />
         </Route>
         <Route path="*" element={<Navigate to="/overview" replace />} />

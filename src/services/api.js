@@ -78,7 +78,12 @@ export const backend = {
 
   aiAnalyses: (storeId, params = {}) => api.get(`/stores/${enc(storeId)}/ai-analytics`, { params: { limit: 100, ...params } }).then(unwrap),
   orderAnalyses: (storeId, orderId) => api.get(`/stores/${enc(storeId)}/orders/${enc(orderId)}/ai-analytics`).then(unwrap),
+  analyzeOrder: (storeId, orderId) => api.post(`/stores/${enc(storeId)}/orders/${enc(orderId)}/analyze`).then(unwrap),
 
   overview: (storeId) => api.get(`/stores/${enc(storeId)}/analytics/overview`).then(unwrap),
   orderStats: (storeId, params = {}) => api.get(`/stores/${enc(storeId)}/analytics/orders`, { params }).then(unwrap),
+
+  aiStatus: () => api.get('/ai/status').then(unwrap),
+  telegramStatus: () => api.get('/telegram/status').then(unwrap),
+  setupTelegramWebhook: (baseUrl) => api.post('/telegram/setup-webhook', baseUrl ? { baseUrl } : {}).then(unwrap),
 }

@@ -116,10 +116,3 @@ export const riskyWilayas = [
   { wilaya: 'Blida', rate: '11.6%', orders: 43 },
   { wilaya: 'Oran', rate: '8.2%', orders: 61 },
 ]
-
-export const suggestedQuestions = [
-  'Which courier performs best?',
-  'Why do customers refuse orders?',
-  'Which shipments failed today?',
-  'Which wilaya has the highest refusal rate?',
-]
